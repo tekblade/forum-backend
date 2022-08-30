@@ -22,7 +22,7 @@ app.post("/register",function(req,res){
       var check=false;
       fs.writeFile(__dirname + "/" + "users.json", JSON.stringify(users),'utf8', function (err) {
          if(err){
-            res.send("error");
+            res.send(JSON.stringify("error"));
             check=true;
          }
       })
